@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your reading progress on Readify">
+    <title>Reading Tracker - Readify</title>
+
+    <!--google-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!--social-icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reading-tracker.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Readify Logo" width="60" height="60">
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-explorer.html">Book Explorer</a></li>
+                <li><a href="reading-tracker.html" class="active">Reading Tracker</a></li>
+                <li><a href="book-recommender.html">Book Recommender</a></li>
+                <li><a href="reading-flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Reading Progress Tracker</h1>
+            <p>Monitor your reading journey and estimate completion time</p>
+        </div>
+    </section>
+
+    <!-- Tracker Form Section -->
+    <section class="tracker-section">
+        <div class="container">
+            <div class="tracker-card">
+                <h2>Track Your Book</h2>
+                <form id="trackerForm">
+                    <div class="form-group">
+                        <label for="bookTitle">Book Title</label>
+                        <input type="text" id="bookTitle" placeholder="Enter book title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalPages">Total Pages</label>
+                        <input type="number" id="totalPages" placeholder="e.g., 350" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pagesRead">Pages Read</label>
+                        <input type="number" id="pagesRead" placeholder="e.g., 120" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="readingSpeed">Daily Reading Speed (pages per day)</label>
+                        <input type="number" id="readingSpeed" placeholder="e.g., 25" min="1" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Calculate Progress</button>
+                    <button type="button" id="saveProgress" class="btn-secondary" style="display: none;">Save Progress</button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section" style="display: none;">
+                <h2>Your Reading Progress</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">📖</div>
+                        <h3>Progress</h3>
+                        <p class="result-value" id="percentComplete">0%</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📄</div>
+                        <h3>Pages Remaining</h3>
+                        <p class="result-value" id="pagesRemaining">0</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⏱️</div>
+                        <h3>Estimated Days</h3>
+                        <p class="result-value" id="daysRemaining">0</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📅</div>
+                        <h3>Finish Date</h3>
+                        <p class="result-value" id="finishDate">-</p>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">0% Complete</p>
+                </div>
+            </div>
+
+            <!-- Saved Progress Section -->
+            <div class="saved-progress">
+                <h2>Saved Books</h2>
+                <div id="savedBooksList" class="saved-books-list">
+                    <p class="no-saved">No saved books yet. Track a book and save your progress!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion in the world of books</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="book-explorer.html">Book Explorer</a></li>
+                        <li><a href="book-recommender.html">Recommender</a></li>
+                        <li><a href="feedback.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Links</h3>
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com"><i class="fab fa-facebook"></i>facebook</a></li>
+                        <li><a href="https://instagram.com"><i class="fab fa-instagram"></i>instagram</a></li>
+                        <li><a href="https://youtube.com"><i class="fab fa-youtube"></i>youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Readify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/books-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

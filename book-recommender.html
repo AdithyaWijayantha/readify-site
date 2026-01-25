@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get personalized book recommendations on Readify">
+    <title>Book Recommender - Readify</title>
+
+    <!--google-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!--social-icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/book-recommender.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Readify Logo" width="60" height="60">
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-explorer.html">Book Explorer</a></li>
+                <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                <li><a href="book-recommender.html" class="active">Book Recommender</a></li>
+                <li><a href="reading-flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Recommender</h1>
+            <p>Let us help you find your next favorite book</p>
+        </div>
+    </section>
+
+    <!-- Recommender Section -->
+    <section class="recommender-section">
+        <div class="container">
+            <div class="recommender-card">
+                <h2>Get Your Recommendation</h2>
+                <div class="recommender-form">
+                    <div class="form-group">
+                        <label for="genreSelect">Select Genre</label>
+                        <select id="genreSelect">
+                            <option value="">Choose a genre...</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="romance">Romance</option>
+                            <option value="thriller">Thriller</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lengthSelect">Book Length</label>
+                        <select id="lengthSelect">
+                            <option value="">Choose length...</option>
+                            <option value="short">Short (under 250 pages)</option>
+                            <option value="medium">Medium (250-400 pages)</option>
+                            <option value="long">Long (over 400 pages)</option>
+                        </select>
+                    </div>
+                    <button id="getRecommendation" class="btn-primary">Get Recommendation</button>
+                </div>
+
+                <!-- Recommendation Result -->
+                <div id="recommendationResult" class="recommendation-result" style="display: none;">
+                    <h3>We Recommend:</h3>
+                    <div class="recommended-book">
+                        <img id="recBookImage" src="" alt="Book cover">
+                        <div class="recommended-info">
+                            <h4 id="recBookTitle"></h4>
+                            <p class="rec-author" id="recBookAuthor"></p>
+                            <p class="rec-synopsis" id="recBookSynopsis"></p>
+                            <div class="rec-details">
+                                <span id="recBookGenre"></span>
+                                <span id="recBookPages"></span>
+                            </div>
+                            <div class="rec-actions">
+                                <button id="pickAgain" class="btn-secondary">Pick Again 🎲</button>
+                                <button id="saveToList" class="btn-primary">Save to Reading List ❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reading List Section -->
+            <div class="reading-list-section">
+                <h2>Your Reading List</h2>
+                <div id="readingList" class="reading-list">
+                    <p class="no-saved">Your reading list is empty. Save some recommendations!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion in the world of books</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="book-explorer.html">Book Explorer</a></li>
+                        <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                        <li><a href="feedback.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Links</h3>
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com"><i class="fab fa-facebook"></i>facebook</a></li>
+                        <li><a href="https://instagram.com"><i class="fab fa-instagram"></i>instagram</a></li>
+                        <li><a href="https://youtube.com"><i class="fab fa-youtube"></i>youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Readify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/books-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

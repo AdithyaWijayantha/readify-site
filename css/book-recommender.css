@@ -1,0 +1,169 @@
+/* Recommender Section */
+.recommender-section {
+    padding: 40px 20px 80px;
+}
+
+.recommender-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.recommender-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.recommender-form {
+    display: grid;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+#getRecommendation {
+    width: 100%;
+}
+
+/* Recommendation Result */
+.recommendation-result {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid var(--light-bg);
+}
+
+.recommendation-result h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.recommended-book {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#recBookImage {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.recommended-info h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.rec-author {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.rec-synopsis {
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.rec-details {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.rec-details span {
+    background: var(--white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.rec-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Reading List Section */
+.reading-list-section {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reading-list-section h2 {
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.reading-list {
+    display: grid;
+    gap: 15px;
+}
+
+.reading-list-item {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reading-list-item h4 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.reading-list-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Social Links */
+.social-links {
+    list-style: none;
+}
+
+.social-links li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    color: var(--primary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recommended-book {
+        grid-template-columns: 1fr;
+    }
+    
+    .rec-actions {
+        flex-direction: column;
+    }
+}

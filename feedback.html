@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send us your feedback and questions">
+    <title>Feedback - Readify</title>
+
+    <!--google-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!--social-icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Readify Logo" width="60" height="60">
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-explorer.html">Book Explorer</a></li>
+                <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                <li><a href="book-recommender.html">Book Recommender</a></li>
+                <li><a href="reading-flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Feedback & Contact</h1>
+            <p>We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-card">
+                <h2>Send Us Your Feedback</h2>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="userName">Name *</label>
+                        <input type="text" id="userName" placeholder="Enter your name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email *</label>
+                        <input type="email" id="userEmail" placeholder="Enter your email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackType">Feedback Type</label>
+                        <select id="feedbackType">
+                            <option value="general">General Feedback</option>
+                            <option value="bug">Report a Bug</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="question">Question</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="userMessage">Message *</label>
+                        <textarea id="userMessage" rows="6" placeholder="Enter your message" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Feedback</button>
+                </form>
+                <div id="feedbackConfirmation" class="confirmation-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank You!</h3>
+                    <p>Your feedback has been received. We'll get back to you soon!</p>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I track my reading progress?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Visit the Reading Tracker page, enter your book details including total pages, pages read, and your daily reading speed. The tracker will calculate your progress percentage and estimated completion date. You can also save your progress for future reference.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I save my favorite books?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! When you get a book recommendation, you can save it to your reading list by clicking the "Save to Reading List" button. Your list is stored locally and will be available whenever you return to the site.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How does the book recommender work?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our book recommender uses your genre preference and desired book length to suggest books from our curated collection. Simply select your preferences and click "Get Recommendation" to discover your next read. You can keep clicking "Pick Again" until you find something you like!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How can I search for specific books?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Go to the Book Explorer page where you can search for books by title or author using the search bar. You can also filter books by genre using the dropdown menu. Click on any book card to see more details including synopsis, series information, and ratings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion in the world of books</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="book-explorer.html">Book Explorer</a></li>
+                        <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                        <li><a href="book-recommender.html">Recommender</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Links</h3>
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com"><i class="fab fa-facebook"></i>facebook</a></li>
+                        <li><a href="https://instagram.com"><i class="fab fa-instagram"></i>instagram</a></li>
+                        <li><a href="https://youtube.com"><i class="fab fa-youtube"></i>youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Readify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/books-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

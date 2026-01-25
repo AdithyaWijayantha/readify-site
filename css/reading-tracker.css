@@ -1,0 +1,154 @@
+/* Tracker Section */
+.tracker-section {
+    padding: 40px 20px 80px;
+}
+
+.tracker-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.tracker-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+/* Results Section */
+.results-section {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+    margin-bottom: 40px;
+}
+
+.results-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.result-card {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.result-card h3 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #e2e8f0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Saved Progress Section */
+.saved-progress {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.saved-progress h2 {
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.saved-books-list {
+    display: grid;
+    gap: 15px;
+}
+
+.saved-book-item {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saved-book-info h4 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.saved-book-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Social Links */
+.social-links {
+    list-style: none;
+}
+
+.social-links li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    color: var(--primary-green);
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create the perfect reading atmosphere with ambient sounds">
+    <title>Reading Flow - Readify</title>
+
+    <!--google-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!--social-icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reading-flow.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Readify Logo" width="60" height="60">
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-explorer.html">Book Explorer</a></li>
+                <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                <li><a href="book-recommender.html">Book Recommender</a></li>
+                <li><a href="reading-flow.html" class="active">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Reading Flow</h1>
+            <p>Create your perfect reading atmosphere</p>
+        </div>
+    </section>
+
+    <!-- Ambient Sounds Section -->
+    <section class="sounds-section">
+        <div class="container">
+            <div class="sounds-card">
+                <h2>Cozy Ambient Sounds</h2>
+                <p class="sounds-description">Select sounds to help you focus and relax while reading</p>
+                
+                <div class="sounds-grid">
+                    <div class="sound-control">
+                        <button class="sound-btn" data-sound="rain">
+                            <span class="sound-icon">🌧️</span>
+                            <span class="sound-label">Rain</span>
+                        </button>
+                        <input type="range" class="volume-slider" data-sound="rain" min="0" max="100" value="50">
+                    </div>
+                    <div class="sound-control">
+                        <button class="sound-btn" data-sound="forest">
+                            <span class="sound-icon">🌲</span>
+                            <span class="sound-label">Forest</span>
+                        </button>
+                        <input type="range" class="volume-slider" data-sound="forest" min="0" max="100" value="50">
+                    </div>
+                    <div class="sound-control">
+                        <button class="sound-btn" data-sound="piano">
+                            <span class="sound-icon">🎹</span>
+                            <span class="sound-label">Piano</span>
+                        </button>
+                        <input type="range" class="volume-slider" data-sound="piano" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Completion Tracker -->
+            <div class="completion-tracker">
+                <h2>Track Completed Books</h2>
+                <p>Keep a record of books you've finished</p>
+                
+                <form id="completionForm" class="completion-form">
+                    <div class="form-group">
+                        <label for="completedBookTitle">Book Title</label>
+                        <input type="text" id="completedBookTitle" placeholder="Enter book title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="completedBookAuthor">Author</label>
+                        <input type="text" id="completedBookAuthor" placeholder="Enter author name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="completionDate">Date Completed</label>
+                        <input type="date" id="completionDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookRating">Your Rating (1-5 stars)</label>
+                        <select id="bookRating" required>
+                            <option value="">Select rating...</option>
+                            <option value="5">⭐⭐⭐⭐⭐ (5 stars)</option>
+                            <option value="4">⭐⭐⭐⭐ (4 stars)</option>
+                            <option value="3">⭐⭐⭐ (3 stars)</option>
+                            <option value="2">⭐⭐ (2 stars)</option>
+                            <option value="1">⭐ (1 star)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Add to Completed</button>
+                </form>
+
+                <!-- Completed Books List -->
+                <div class="completed-books">
+                    <h3>Your Completed Books</h3>
+                    <div id="completedBooksList" class="completed-list">
+                        <p class="no-saved">No completed books yet. Start tracking your reading achievements!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion in the world of books</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="book-explorer.html">Book Explorer</a></li>
+                        <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                        <li><a href="feedback.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Links</h3>
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com"><i class="fab fa-facebook"></i>facebook</a></li>
+                        <li><a href="https://instagram.com"><i class="fab fa-instagram"></i>instagram</a></li>
+                        <li><a href="https://youtube.com"><i class="fab fa-youtube"></i>youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Readify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/books-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

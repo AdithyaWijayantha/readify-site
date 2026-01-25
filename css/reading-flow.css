@@ -1,0 +1,154 @@
+/* Sounds Section */
+.sounds-section {
+    padding: 40px 20px 80px;
+}
+
+.sounds-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.sounds-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.sounds-description {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.sounds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.sound-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sound-btn {
+    background: var(--light-bg);
+    border: 2px solid transparent;
+    padding: 30px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sound-btn:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.sound-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+}
+
+.sound-icon {
+    font-size: 2.5rem;
+}
+
+.sound-label {
+    font-weight: 600;
+}
+
+.volume-slider {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Completion Tracker */
+.completion-tracker {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px var(--shadow);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.completion-tracker h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.completion-tracker > p {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.completion-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.completed-books h3 {
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.completed-list {
+    display: grid;
+    gap: 15px;
+}
+
+.completed-item {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+    align-items: center;
+}
+
+.completed-info h4 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.completed-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.completed-rating {
+    font-size: 1.2rem;
+}
+
+/* Social Links */
+.social-links {
+    list-style: none;
+}
+
+.social-links li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    color: var(--primary-green);
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore and discover books on Readify">
+    <title>Book Explorer - Readify</title>
+
+    <!--google-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!--social-icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/book-explorer.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Readify Logo" width="60" height="60">
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book-explorer.html" class="active">Book Explorer</a></li>
+                <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                <li><a href="book-recommender.html">Book Recommender</a></li>
+                <li><a href="reading-flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Explorer</h1>
+            <p>Discover your next great read</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-controls">
+                <input type="text" id="searchInput" placeholder="Search by title or author...">
+                <select id="genreFilter">
+                    <option value="all">All Genres</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Grid Section -->
+    <section class="books-section">
+        <div class="container">
+            <div id="booksGrid" class="books-grid">
+            </div>
+            <p id="noResults" class="no-results" style="display: none;">No books found matching your search.</p>
+        </div>
+    </section>
+
+    <!-- Book Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Book cover">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-author" id="modalAuthor"></p>
+                    <div class="modal-section">
+                        <h3>Synopsis</h3>
+                        <p id="modalSynopsis"></p>
+                    </div>
+                    <div class="modal-section" id="seriesSection" style="display: none;">
+                        <h3>Series Information</h3>
+                        <ul id="modalSeries"></ul>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Ratings & Reviews</h3>
+                        <table class="reviews-table">
+                            <thead>
+                                <tr>
+                                    <th>Source</th>
+                                    <th>Rating</th>
+                                    <th>Reviews</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modalReviews">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Readify</h3>
+                    <p>Your companion in the world of books</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="reading-tracker.html">Reading Tracker</a></li>
+                        <li><a href="book-recommender.html">Recommender</a></li>
+                        <li><a href="feedback.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Links</h3>
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com"><i class="fab fa-facebook"></i>facebook</a></li>
+                        <li><a href="https://instagram.com"><i class="fab fa-instagram"></i>instagram</a></li>
+                        <li><a href="https://youtube.com"><i class="fab fa-youtube"></i>youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Readify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/books-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
